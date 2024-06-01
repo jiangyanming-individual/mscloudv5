@@ -3,14 +3,12 @@ package com.atguigu.cloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@EnableDiscoveryClient //开启Consul 服务注册与发现
-@MapperScan("com.atguigu.cloud.mapper") //import tk.mybatis.spring.annotation.MapperScan;
-public class Main8001 {
+@EnableDiscoveryClient //服务注册与发现开启
+public class Main8050 {
     public static void main(String[] args) {
-        SpringApplication.run(Main8001.class,args);
+        SpringApplication.run(Main8050.class,args);
     }
 
 }

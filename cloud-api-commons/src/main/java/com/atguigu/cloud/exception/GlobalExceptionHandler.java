@@ -1,6 +1,7 @@
 package com.atguigu.cloud.exception;
 
 
+
 import com.atguigu.cloud.common.ResultData;
 import com.atguigu.cloud.constant.ReturnCodeEnum;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +23,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResultData<String> exceptionHandle(Exception e) {
         System.out.println("######### 系统内部异常#########");
-        log.error("system error", e.getMessage(),e);
+        log.error("系统内部错误", e.getMessage(),e);
         return ResultData.fail(ReturnCodeEnum.RC500.getCode(),e.getMessage());
     }
 
