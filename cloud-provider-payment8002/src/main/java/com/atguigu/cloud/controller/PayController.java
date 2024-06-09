@@ -70,7 +70,6 @@ public class PayController {
     @GetMapping("/pay/get/{id}")
     @Operation(summary = "根据id查询",description = "查询支付流水方法,id作为参数")
     public ResultData<Pay> getPayById(@PathVariable("id") Integer id){ //修改成变量一致的；
-
         try {
             //故意设置错误
             TimeUnit.SECONDS.sleep(62);
@@ -95,7 +94,7 @@ public class PayController {
     /**
      * 读取Consul 中配置信息
      */
-    @Value("${server.port}") //如何在Spring Boot中使用@value获得配置文件中的内容。
+    @Value("${server.port}")
     private String port;
 
     @GetMapping(value = "/pay/get/info")

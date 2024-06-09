@@ -20,6 +20,12 @@
     </properties>
 
     <dependencies>
+
+        <!--openfeign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
         <!--spring boot web + actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

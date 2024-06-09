@@ -25,6 +25,13 @@
             <version>4.1.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-loadbalancer -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.atguigu.cloud</groupId>
             <artifactId>cloud-api-commons</artifactId>

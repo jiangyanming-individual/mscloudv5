@@ -10,9 +10,8 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class OrderController {
 
-//    private static final String PAY_SERVICE_URL="http://localhost:8001";
     /**
-     * 使用Consul中注册的服务
+     * 使用Consul中注册的服务前缀
      */
     private static final String PAY_SERVICE_URL="http://cloud-payment-service";
 
@@ -72,5 +71,11 @@ public class OrderController {
          restTemplate.delete(PAY_SERVICE_URL + "/pay/del/"+ id);
     }
 
+
+    @GetMapping("/consumer/pay/get/info")
+    public String getConsulInfo() {
+        //请求服务
+        return restTemplate.getForObject(PAY_SERVICE_URL + "/pay/get/info",String.class);
+    }
 
 }
