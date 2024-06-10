@@ -9,18 +9,15 @@ import org.springframework.web.bind.annotation.*;
 /**
  * OpenFeign 定义的消费者cloud-payment-service中的服务接口
  */
-@FeignClient(value = "cloud-payment-service") //服务的名称
+@FeignClient(value = "cloud-payment-service") //网关名字
 public interface OpenFeignApi {
-
     /**
      * 添加支付接口
      * @param payDTO
      * @return
      */
-
     @PostMapping("/pay/add")
     public ResultData addPay(@RequestBody PayDTO payDTO);
-
 
     /**
      * 查询接口
@@ -73,4 +70,11 @@ public interface OpenFeignApi {
      */
     @GetMapping(value = "/pay/ratelimit/{id}")
     public String myRatelimit(@PathVariable("id") Integer id);
+
+
+    @GetMapping("/pay/gateway/get/{id}")
+    public ResultData getPayById(@PathVariable("id") Integer id);
+
+    @GetMapping("/pay/gateway/info")
+    public ResultData<String> getGateWayInfo();
 }

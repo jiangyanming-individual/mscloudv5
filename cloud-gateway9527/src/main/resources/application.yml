@@ -1,0 +1,23 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway #以微服务注册进consul或nacos服务列表内
+  cloud:
+    consul: #配置consul地址
+      host: localhost
+      port: 8500
+      discovery:
+        prefer-ip-address: true
+        service-name: ${spring.application.name}
+    gateway:
+      routes:
+        - id: path_route01
+          uri: lb://cloud-payment-service # 直接使用lb://服务名这样的方式
+          predicates:
+            - Path=/pay/gateway/get/**
+        - id: path_route02
+          uri: lb://cloud-payment-service # 转发的地址
+          predicates:
+            - Path=/pay/gateway/info/** #路由匹配

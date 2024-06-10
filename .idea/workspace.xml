@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3fe54d-7cf7-4e2c-86c6-cd5fb3ae4af1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/java/com/atguigu/cloud/controller/OrderCircuitController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/atguigu/cloud/controller/PayCircuitController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/api/PayFeignApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/java/com/atguigu/cloud/controller/OrderGateWayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-gateway9527/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloud-provider-payment8001/src/main/java/com/atguigu/cloud/controller/PayGateWayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/api/OpenFeignApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-api-commons/src/main/java/com/atguigu/cloud/api/OpenFeignApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/java/com/atguigu/cloud/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/java/com/atguigu/cloud/config/FeignConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/java/com/atguigu/cloud/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/java/com/atguigu/cloud/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-openfeign-order8051/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-consumer-order8050/src/main/java/com/atguigu/cloud/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-consumer-order8050/src/main/java/com/atguigu/cloud/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -64,44 +66,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.test.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.cloud-api-commons [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.mybatis_generator2024 [org.mybatis.generator:mybatis-generator-maven-plugin:1.4.2:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Main80.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.Main8001.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Main8002.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Main8050.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MainFeign8051.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WorkSpace/Java_workspace/mscloudv5/cloud-consumer-openfegin-order8051/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.21711132&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.test.executor": "Run",
+    "Maven.cloud-api-commons [install].executor": "Run",
+    "Maven.mybatis_generator2024 [org.mybatis.generator:mybatis-generator-maven-plugin:1.4.2:generate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Main80.executor": "Debug",
+    "Spring Boot.Main8001.executor": "Run",
+    "Spring Boot.Main8002.executor": "Run",
+    "Spring Boot.Main8050.executor": "Run",
+    "Spring Boot.MainFeign8051.executor": "Run",
+    "Spring Boot.MainGateWay9527.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/WorkSpace/Java_workspace/mscloudv5/cloud-consumer-openfegin-order8051/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.21711132",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;java.sql.Driver&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "java.sql.Driver",
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -128,7 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MainFeign8051">
+  <component name="RunManager" selected="Spring Boot.MainGateWay9527">
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.atguigu.cloud.controller.test" />
       <module name="cloud-provider-payment8001" />
@@ -195,8 +198,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainGateWay9527" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloud-gateway9527" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.MainGateWay9527" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.cloud.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.MainGateWay9527" />
         <item itemvalue="Spring Boot.Main8001" />
         <item itemvalue="Spring Boot.Main8050" />
         <item itemvalue="Application.test02" />
@@ -225,7 +242,7 @@
       <workItem from="1717248066013" duration="1994000" />
       <workItem from="1717288054978" duration="1293000" />
       <workItem from="1717896128193" duration="21355000" />
-      <workItem from="1718000455409" duration="7771000" />
+      <workItem from="1718000455409" duration="14270000" />
     </task>
     <servers />
   </component>
