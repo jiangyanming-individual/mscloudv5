@@ -49,4 +49,28 @@ public interface OpenFeignApi {
      */
     @GetMapping("/pay/get/info")
     public String getConsulInfo();
+
+    /**
+     * 使用断路器：服务熔断和降级
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/pay/circuit/{id}")
+    public String myCircuit(@PathVariable("id") Integer id);
+
+    /**
+     * 隔壁机制
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/pay/bulkhead/{id}")
+    public String myBulkhead(@PathVariable("id") Integer id);
+
+    /**
+     * 流量限流
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/pay/ratelimit/{id}")
+    public String myRatelimit(@PathVariable("id") Integer id);
 }

@@ -40,7 +40,6 @@ public class OrderController {
     public ResultData getOrderById(@PathVariable("id") Integer id) {
 
         System.out.println("根据id查看支付订单流水信息");
-
         ResultData resultData= null;
         try {
             System.out.println("调用开始。。。" + DateUtil.now());
