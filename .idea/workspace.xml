@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d3fe54d-7cf7-4e2c-86c6-cd5fb3ae4af1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order8053/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order8053/src/main/java/com/atguigu/cloud/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order8053/src/main/java/com/atguigu/cloud/controller/OrderNacosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-consumer-nacos-order8053/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java/com/atguigu/cloud/controller/PayAlibabaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java/com/atguigu/cloud/controller/NacosConfigClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/java/com/atguigu/cloud/controller/PayAlibabaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudalibaba-provider-payment9001/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,11 +77,13 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Main3377.executor": "Run",
     "Spring Boot.Main80.executor": "Debug",
     "Spring Boot.Main8001.executor": "Run",
     "Spring Boot.Main8002.executor": "Run",
     "Spring Boot.Main8050.executor": "Run",
     "Spring Boot.Main9001.executor": "Run",
+    "Spring Boot.Main9002.executor": "Run",
     "Spring Boot.MainFeign8051.executor": "Run",
     "Spring Boot.MainGateWay9527.executor": "Run",
     "Spring Boot.MainNaco8053.executor": "Run",
@@ -132,10 +135,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main9001">
-    <configuration name="Main8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloud-provider-payment8001" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.Main8001" />
+  <component name="RunManager" selected="Spring Boot.Main3377">
+    <configuration name="Main3377" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloudalibaba-config-nacos-client3377" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.Main3377" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.atguigu.cloud.*" />
@@ -153,9 +156,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main8050" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="Main8050" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cloud-consumer-order8050" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.Main8050" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main9001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloudalibaba-provider-payment9001" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.Main9001" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.atguigu.cloud.*" />
@@ -166,9 +176,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main9001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="cloudalibaba-provider-payment9001" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.Main9001" />
+    <configuration name="Main9002" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cloudalibaba-provider-payment9002" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.atguigu.cloud.Main9002" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.atguigu.cloud.*" />
@@ -214,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Main9001" />
+        <item itemvalue="Spring Boot.Main3377" />
         <item itemvalue="Spring Boot.MainNaco8053" />
+        <item itemvalue="Spring Boot.Main9002" />
+        <item itemvalue="Spring Boot.Main9001" />
         <item itemvalue="Spring Boot.MainGateWay9527" />
-        <item itemvalue="Spring Boot.Main8001" />
-        <item itemvalue="Spring Boot.Main8050" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +255,7 @@
       <workItem from="1717896128193" duration="21355000" />
       <workItem from="1718000455409" duration="14521000" />
       <workItem from="1718069169684" duration="3531000" />
-      <workItem from="1718153946381" duration="3801000" />
+      <workItem from="1718153946381" duration="7325000" />
     </task>
     <servers />
   </component>
