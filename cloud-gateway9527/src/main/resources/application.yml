@@ -17,7 +17,19 @@ spring:
           uri: lb://cloud-payment-service # 直接使用lb://服务名这样的方式
           predicates:
             - Path=/pay/gateway/get/**
+#            - After=2024-06-13T09:15:46.978306100+08:00[Asia/Shanghai]
+#            - Between=2024-06-13T09:15:46.978306100+08:00[Asia/Shanghai], 2024-06-13T09:18:46.978306100+08:00[Asia/Shanghai]
+#            - Cookie=userName, jym
+#            - Header=X-Request-Id, \d+
+#            - Host=**.atguigu.com
+#            - Query=userName, \d+
+            - My=diamond
         - id: path_route02
           uri: lb://cloud-payment-service # 转发的地址
           predicates:
             - Path=/pay/gateway/info/** #路由匹配
+#            - Cookie=userName, jym
+#            - Between=2024-06-13T09:15:46.978306100+08:00[Asia/Shanghai], 2024-06-13T09:18:46.978306100+08:00[Asia/Shanghai] #断言匹配
+#            - Header=X-Request-Id, \d+
+#            - Host=**.atguigu.com
+#            - Query=userName, \d+

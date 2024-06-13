@@ -71,14 +71,11 @@ public class OrderController {
          restTemplate.delete(PAY_SERVICE_URL + "/pay/del/"+ id);
     }
 
-
     @GetMapping("/consumer/pay/get/info")
     public String getConsulInfo() {
         //请求服务
         return restTemplate.getForObject(PAY_SERVICE_URL + "/pay/get/info",String.class);
     }
-
-
 
 
 }
