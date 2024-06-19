@@ -8,3 +8,7 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848 #配置Nacos地址
+    sentinel: #sentinel的配置
+      transport:
+        dashboard: localhost:8080 #配置Sentinel dashboard控制台服务地址
+        port: 8719 #默认后端端口
